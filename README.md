@@ -1,4 +1,4 @@
-#Author's Note
+## Author's Note
 
 While writing this and running these commands, I am *also* running many small (sometimes erroneous) sanity checks on my data. This usually involves some form of 'sum(Vector==Condition)' to count things and make sure everything is being accounted for. 
 Rather than write *all* of the little steps I take to make sure that my steps make sense, I recommend you get in the habit of regularly running your own checks.
