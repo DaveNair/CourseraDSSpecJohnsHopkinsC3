@@ -13,10 +13,12 @@ Just in case anyone did their averages on the *entire* dataset.
 My file `run_analysis` runs the following, in order:
 1. Creates function `RenameFeature(FeatureString)`, which converts:
 > 'tBodyAcc-mean()-X'  -->  'BodyAccX-Mean-TimeDomain'
+
 > 'fBodyAcc-mean()'  -->  'BodyAcc-Mean-FreqDomain'
 
 2. Reads and combines testing and training sets:
 > order: subjects, X, y
+
 > order: test, train  (ex: `y <- rbind(y,read.table('train/y_train.txt'))`)
 
 3. Extracts Mean or Standard Deviation Features
