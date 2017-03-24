@@ -61,9 +61,9 @@ The file *features_info.txt* details how their experiment was conducted and how 
 
 > * For the angle() variable, they calculated some numbers *per window*, explaining why some of our features already have the word 'Mean' in their name.
 
-#Features
+# Features
 
-##features.txt
+## features.txt
 Since we do not necessarily know how many features there could be, let's try looking at some basics of this file. We never know if it'll be a huge file that'll take forever to load, so these are some Linux (or Git Bash) command-line methods that can return relatively useful results, quickly.
 
 	$ cat features.txt | wc -l
@@ -79,7 +79,7 @@ Since we do not necessarily know how many features there could be, let's try loo
 	560 angle(Y,gravityMean)
 	561 angle(Z,gravityMean)
 
-##features_info.txt
+## features_info.txt
 
 Rather than post ALL of the possible bits of info they provide us, here is a subset of that list, which contains the two variables we will eventually look at:
 > mean(): Mean value
@@ -132,7 +132,7 @@ Inspecting the last `cat * | grep` command (i.e., remove the '| wc -l') reveals 
 
 
 
-##Summary of Features
+## Summary of Features
 
 As we'll see when we review our goals, we're only really concerned about "the measurements on the mean and standard deviation for each measurement" (as per the instructions). 
 Keeping that into consideration, here is a summary of the features:
@@ -145,7 +145,7 @@ Keeping that into consideration, here is a summary of the features:
 > > * 'mean()', 'std()', 'meanFreq()' == 'Mean', 'StandardDev', 'Mean'
 > > > Note: I am choosing to lose the 'Freq' part of 'meanFreq()' because I've already determined that ALL lines with 'meanFreq()' already begin with 'f' as an indicator
 
-#Goal
+# Goal
 
 OUR goal is to finish the programming assignment, copied and pasted as follows:
 
@@ -156,9 +156,9 @@ OUR goal is to finish the programming assignment, copied and pasted as follows:
 		4. Appropriately labels the data set with descriptive variable names.
 		5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-#Solution
+# Solution
 
-##Part 1: Combining (and Writing)
+## Part 1: Combining (and Writing)
 
 It might seem silly, but after merging the data, I'll attempt to write it in a file so that I can easily pause, stop, continue, etc., without worrying about formatting issues.
 
@@ -189,7 +189,7 @@ Assuming what I just said is true, here are the pertinent files for this part an
 > > 1st column is Index (of feature), 2nd col is feature's name 
 
 
-###Combining SubjectIDs, Features, and Labels
+### Combining SubjectIDs, Features, and Labels
 
 I'm not going to worry about the feature *names* right now, or *which* features to extract. I will, however, probably do that before saving the file (just to practice efficient storing).
 For each variable (subjIDs, X, and y), I'm just reading the test data, and then *rbind'ing* the training data onto it. Later, I'll cbind subjIDs, X, and y together into one dataframe.
@@ -214,7 +214,7 @@ We're sort of done here (since the next step in the assignment **is** extracting
 
 Again, `Ans1` is never actually used since I still want to trim this data down some more, but this dataframe does fulfill our first requirement and is (close to) the first step of what we would like to accomplish overall.
 	
-##Extracting the Mean and Standard Deviation Measurements 
+## Extracting the Mean and Standard Deviation Measurements 
 
 First, I'd like a normal character vector with all of the names of the features, in order.
 
