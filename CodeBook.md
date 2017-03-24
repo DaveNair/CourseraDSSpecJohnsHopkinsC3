@@ -38,6 +38,12 @@ This section was originally placed later in this file, but it was moved since mo
 The file *features_info.txt* details how their experiment was conducted and how their data was processed. Most of this is not used in my analysis since we're asked to do something simple, but here are the notes I took down about their process:
 > * tAcc-XYZ := accelerometer 3-axial raw signal, @ rate 50Hz
 > * tGyro-XYZ := gyroscope 3-axial raw signal, @ rate 50Hz
+> * All values are based on gravitational units 'g' (~9.8 m/s/s) and are normalized and bounded within [-1,1] 
+> > * Non-Jerk Accelerometer Units: m/s/s  (m\*s^{-2} or meters-per-second-squared)
+> > * Non-Jerk Gyroscope Units: rad/s (radians-per-second)
+> > * Jerk Accelerometer Units: m/s/s/s (m\*s^{-3} or meters-per-second-cubed)
+> > * Jerk Gyroscope Units: rad/s/s (r\*s^{-2} or radians-per-second-squared)
+
 > * Filters in order (& applied to):
 > > 1. Median filter (both)
 > > 2. 3rd order low pass Butterworth w cornerFreq=20Hz (both)
