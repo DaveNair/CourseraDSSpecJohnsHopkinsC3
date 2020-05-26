@@ -338,4 +338,3 @@ I'll need to figure the subsetting and reshaping things out at a future date.
 And there you have it! One dataframe and file that correctly expresses the averages of *each* feature (that is a mean/std measurement) *per* subject *per* activity. Hope you enjoy; let me know if you have any comments or questions!
 
 Dave Nair
-mdavenair@gmail.com
